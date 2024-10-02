@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lagrange Polynomials</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+
+    <!-- MathJax (Latex integration)-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="article">
+        <p>
+          The Lagrange Polynomials associated to a set of \(x_i\) are : \(l_i(X) = \prod_{j=0,j\neq 1}^n \frac{X-x_j}{x_i-x_j}\)
+        </p>
+        <p>
+          Below, you can see the lagrange polynomials associated to a set of three points, and move the \(x_i\) around to see the effect it has on all the polynomials.
+        </p>
+
+          <div id = "plot"></div>
+        <script src="sketch.js"></script>
+        <p>
+          We see that the polynomials indeed respect the properties :
+          \(deg(l_i)=n,\forall i\) and \(l_i(x_i)=\delta_{i,j},0\leq i,j\leq n\), meaning that \(l_i(x_i)=1\) and \(l_i(x_j)=0\) when \(j\neq i\)
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
