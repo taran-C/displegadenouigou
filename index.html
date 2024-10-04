@@ -11,6 +11,10 @@
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
 
+    <!-- Personnal libraries -->
+    <script src="plots.js"></script>
+    <script src="maths.js"></script>
+
     <!-- MathJax (Latex integration)-->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
@@ -25,12 +29,24 @@
           Below, you can see the lagrange polynomials associated to a set of three points, and move the \(x_i\) around to see the effect it has on all the polynomials.
         </p>
 
-          <div id = "plot"></div>
-        <script src="sketch.js"></script>
+        <div id = "lagrange_polys"><script src="lagrange_polys.js"></script></div>
+        
         <p>
           We see that the polynomials indeed respect the properties :
           \(deg(l_i)=n,\forall i\) and \(l_i(x_i)=\delta_{i,j},0\leq i,j\leq n\), meaning that \(l_i(x_i)=1\) and \(l_i(x_j)=0\) when \(j\neq i\)
         </p>
+
+        <p>
+          An interesting property (by design) of these polynomials is that any linear combination \(\sum_i c_il_i(X)\) will have value \(c_i\) at \(x_i\), and the resulting polynomial will be the lowest degree one to go through all those points.
+          Our initial function \(f\) is therefore quite well approximated by the polynomial \(\sum_if_il_i(X)\)
+        </p>
+        
+        <div id = "interpolated"><script src="interpolated.js"></script></div>
+
+        <p>
+          blablbalbala
+        </p>
+
       </div>
     </div>
   </body>
