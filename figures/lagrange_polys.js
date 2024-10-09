@@ -34,6 +34,7 @@ let lagrange_polys = new p5(( sketch ) => {
 
     plot(sketch, x,y, color = "red")
     var fc = ftd(xs[0], 1)
+    sketch.fill("lightpink")
     sketch.circle(fc[0], fc[1], 12)
     y = []
 
@@ -43,6 +44,7 @@ let lagrange_polys = new p5(( sketch ) => {
 
     plot(sketch, x,y, color = "blue")
     var fc = ftd(xs[1], 1)
+    sketch.fill("lightblue")
     sketch.circle(fc[0], fc[1], 12)
     y = []
 
@@ -52,6 +54,7 @@ let lagrange_polys = new p5(( sketch ) => {
 
     plot(sketch, x,y, color = "green")
     var fc = ftd(xs[2], 1)
+    sketch.fill("lightgreen")
     sketch.circle(fc[0], fc[1], 12)
   }
 

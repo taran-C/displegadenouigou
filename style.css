@@ -19,4 +19,6 @@ canvas {
   width: 45%;
   justify-content: center;
   flex-direction: column;
+  background-color: #EEEEEE;
+  padding: 20px;
 }

@@ -22,6 +22,36 @@
   <body>
     <div id="main">
       <div id="article">
+        <h1>Interpolation</h1>
+        <h2>Introduction</h2>
+        <p>Let's say, for the sake of argument, that you have a set of \(n\) discrete values \(f_i,1\leq i\leq n\) discretized at a position \(x_i\). They could for example be a set of temperature measurements at different places along a line.</p>
+
+        <p>Imagine now that you need to have an estimate of the temperature at a place \(x\) you didn't measure. Since you have no data there, you'll have to use the values around this point to create a function \(f(x)\) that will fill the "holes" in your measurements.</p>
+
+        <p>This is called ✨Interpolation✨</p>
+
+        <h2>Constant Interpolation</h2>
+
+        <p>The first way to create such an interpolation function is to simply set the function equal to the closest value, meaning that \(f(x) = f_i\) if \(x_i\) is the closest to \(x\).</p>
+        <!-- <p>With three points we would have \(f(x)=\left \{ \begin{array}{@{}l@{}} x_i \text{ if } \\ 0 \end{array} \right. \)</p> -->
+
+        <p>To see how such a function changes along with its measurement you can move the \((x_i,f_i)\) represented by the colored circles.</p>
+
+        <div id = "constant_int"><script src="figures/constant_int.js"></script></div>
+
+        <p>This does indeed give us a value of \(f(x),\forall x\), but it does present a few problems. Some data, in order to be physically correct, need to be continuous, and it is quite obvious here that this function doesn't respect this, as it has "jumps" when it goes from a value to another one. This can lead to quite a lot of problems, for example when applying a derivative. It also doesn't represent at all the variability between measurements that happens within the physical function we're trying to represent.</p>
+
+        <p>The next step is then to try and find a continuous function that matches our data, wich we'll do with :</p>
+
+        <h2>Linear Interpolation</h2>
+        
+        <p>The idea here is to draw a line between each two adjacent coefficients, wich will give a "smoother" result than the previous method. We also extend the line before (after) the first (last) point in order to have values \(\forall x\).</p>
+
+        <p>The function to compute our interpolated value with \(x_i\leq x \leq x_{i+1}\) is \(f(x) = p \cdot(x-x_i) + f_i\) with \(p=\frac{f_{i+1}-f_i}{x_{i+1}-x_i}\)</p>
+
+        <div id = "linear_int"><script src="figures/linear_int.js"></script></div>
+
+        <h2>Lagrange Polynomials</h2>
         <p>
           The Lagrange Polynomials associated to a set of \(x_i\) are : \(l_i(X) = \prod_{j=0,j\neq 1}^n \frac{X-x_j}{x_i-x_j}\)
         </p>
@@ -29,7 +59,7 @@
           Below, you can see the lagrange polynomials associated to a set of three points, and move the \(x_i\) around to see the effect it has on all the polynomials.
         </p>
 
-        <div id = "lagrange_polys"><script src="lagrange_polys.js"></script></div>
+        <div id = "lagrange_polys"><script src="figures/lagrange_polys.js"></script></div>
         
         <p>
           We see that the polynomials indeed respect the properties :
@@ -41,11 +71,18 @@
           Our initial function \(f\) is therefore quite well approximated by the polynomial \(\sum_if_il_i(X)\)
         </p>
         
-        <div id = "interpolated"><script src="interpolated.js"></script></div>
+        <div id = "interpolated"><script src="figures/interpolated.js"></script></div>
 
         <p>
           blablbalbala
         </p>
+
+        <h2>Post-Scriptum : Discrete derivation with Lagrange Polynomials</h2>
+        <p></p>
+
+        <h2>Post-Post-Scriptum : Runge's phenomenon</h2>
+
+        <h2>Conclusion</h2>
 
       </div>
     </div>

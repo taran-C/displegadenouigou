@@ -3,17 +3,16 @@ xmin = -2, xmax = 2
 ymin = -3, ymax = 3
 width = 10, height = 10
 
-let interpolated = new p5(( sketch ) => {
+let constant_int = new p5(( sketch ) => {
   var holding = -1
-  var xs = [-1,0,1]
-  var fs = [2,0.5,-1]
+  let points = [{'x' : -1, 'f' : 2},{'x' : 0, 'f' : 0.5},{'x' : 1, 'f' : -1}]
 
   sketch.setup = function() {
-    var canvasDiv = document.getElementById('interpolated');
+    var canvasDiv = document.getElementById('constant_int');
     width = canvasDiv.offsetWidth;
     height = 400
     var canvas = sketch.createCanvas(width, height);
-    canvas.parent('interpolated')
+    canvas.parent('constant_int')
   }
 
 
@@ -21,56 +20,49 @@ let interpolated = new p5(( sketch ) => {
     sketch.background(240);
     draw_axes(sketch)
 
+    let npoints = 200
+    var x = linspace(xmin,xmax,npoints)
+    let y = []
 
-    var x = linspace(xmin,xmax,100)
-    var ps = lag_pols(xs)
-    var y = []
-    
+    let sortedpoints = points.toSorted((a,b) => a.x - b.x)
 
-    //Plot the generated function
-    // interp_poly = fs[i]
-    for (var i = 0; i<x.length; i++) {
-      y.push(fs[0]*ps[0].eval(x[i]) + fs[1]*ps[1].eval(x[i]) + fs[2]*ps[2].eval(x[i]))
+    for (let i = 0; i<npoints; i++){
+        if (x[i] < (sortedpoints[0].x+sortedpoints[1].x)/2){
+            y.push(sortedpoints[0].f)
+        } else if (x[i] < (sortedpoints[1].x+sortedpoints[2].x)/2) {
+            y.push(sortedpoints[1].f)
+        } else {
+            y.push(sortedpoints[2].f)
+        }
     }
+
+    //Plot constant interpolation function
     plot(sketch, x,y, color = "black")
-    y = []
 
-    //Plot the scaled lagrande polynomials
-    for (var i = 0; i<x.length; i++) {
-      y.push(fs[0] * ps[0].eval(x[i]))
-    }
-    plot(sketch, x,y, color = "lightpink")
-    var fc = ftd(xs[0], fs[0])
+    //Draw control points
+    sketch.strokeWeight(2)
+    sketch.fill("lightpink")
     sketch.stroke("red")
+    fc = ftd(points[0].x, points[0].f)
     sketch.circle(fc[0], fc[1], 12)
-    y = []
 
-    for (var i = 0; i<x.length; i++) {
-      y.push(fs[1] * ps[1].eval(x[i]))
-    }
-
-    plot(sketch, x,y, color = "aquamarine")
-    var fc = ftd(xs[1], fs[1])
+    sketch.fill("aquamarine")
     sketch.stroke("blue")
+    fc = ftd(points[1].x, points[1].f)
     sketch.circle(fc[0], fc[1], 12)
-    y = []
 
-    for (var i = 0; i<x.length; i++) {
-      y.push(fs[2] * ps[2].eval(x[i]))
-    }
-
-    plot(sketch, x,y, color = "lightgreen")
-    var fc = ftd(xs[2], fs[2])
+    sketch.fill("lightgreen")
     sketch.stroke("green")
+    fc = ftd(points[2].x, points[2].f)
     sketch.circle(fc[0], fc[1], 12)
   }
 
   //TODO optimize
   sketch.mousePressed = function(event) {
     if(event.button == 0) {
-      var c0 = ftd(xs[0], fs[0])
-      var c1 = ftd(xs[1], fs[1])
-      var c2 = ftd(xs[2], fs[2])
+      var c0 = ftd(points[0].x, points[0].f)
+      var c1 = ftd(points[1].x, points[1].f)
+      var c2 = ftd(points[2].x, points[2].f)
       if (sketch.sqrt((sketch.mouseX - c0[0])**2 + (sketch.mouseY - c0[1])**2)<12) {
         holding = 0
       } else if (sketch.sqrt((sketch.mouseX - c1[0])**2 + (sketch.mouseY - c1[1])**2)<12) {
@@ -84,8 +76,8 @@ let interpolated = new p5(( sketch ) => {
   sketch.mouseDragged = function() {
     if (holding != -1) {
       var c = dtf(sketch.mouseX, sketch.mouseY)
-      xs[holding] = c[0]
-      fs[holding] = c[1]
+      points[holding].x = c[0]
+      points[holding].f = c[1]
     }
   }
 
