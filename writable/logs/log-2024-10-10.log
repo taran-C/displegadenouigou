@@ -1,0 +1,180 @@
+CRITICAL - 2024-10-10 15:09:28 --> ParseError: syntax error, unexpected token "}", expecting ";"
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 10.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('/opt/lampp/htdocs/explainers/app/Controllers/Home.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH/CodeIgniter.php(887): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH/CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:27:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "interpolation.php"
+[Method: GET, Route: explainer/interpolation]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('interpolation.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('interpolation', [], true)
+ 3 APPPATH/Controllers/Explainers.php(13): view('interpolation')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->view('interpolation')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:27:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "explainer/interpolation.php"
+[Method: GET, Route: explainer/interpolation]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('explainer/interpolation.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('explainer/interpolation', [], true)
+ 3 APPPATH/Controllers/Explainers.php(13): view('explainer/interpolation')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->view('interpolation')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:29:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "explainers/maths.js"
+[Method: GET, Route: explainer/maths.js]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('explainers/maths.js')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('explainers/maths.js', [], true)
+ 3 APPPATH/Controllers/Explainers.php(13): view('explainers/maths.js')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->view('maths.js')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:29:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "explainers/plots.js"
+[Method: GET, Route: explainer/plots.js]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('explainers/plots.js')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('explainers/plots.js', [], true)
+ 3 APPPATH/Controllers/Explainers.php(13): view('explainers/plots.js')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->view('plots.js')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:29:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "explainers/style.css"
+[Method: GET, Route: explainer/style.css]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('explainers/style.css')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('explainers/style.css', [], true)
+ 3 APPPATH/Controllers/Explainers.php(13): view('explainers/style.css')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->view('style.css')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:29:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "explainers/plots.js"
+[Method: GET, Route: explainer/plots.js]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('explainers/plots.js')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('explainers/plots.js', [], true)
+ 3 APPPATH/Controllers/Explainers.php(13): view('explainers/plots.js')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->view('plots.js')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:29:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "explainers/maths.js"
+[Method: GET, Route: explainer/maths.js]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('explainers/maths.js')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('explainers/maths.js', [], true)
+ 3 APPPATH/Controllers/Explainers.php(13): view('explainers/maths.js')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->view('maths.js')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:29:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "explainers/style.css"
+[Method: GET, Route: explainer/style.css]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('explainers/style.css')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('explainers/style.css', [], true)
+ 3 APPPATH/Controllers/Explainers.php(13): view('explainers/style.css')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->view('style.css')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:31:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "explainers_home.php"
+[Method: GET, Route: explainers]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('explainers_home.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('explainers_home', [], true)
+ 3 APPPATH/Controllers/Explainers.php(9): view('explainers_home')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:37:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "explainers/maths.js"
+[Method: GET, Route: explainers/maths.js]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('explainers/maths.js')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('explainers/maths.js', [], true)
+ 3 APPPATH/Controllers/Explainers.php(13): view('explainers/maths.js')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->view('maths.js')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:37:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "explainers/style.css"
+[Method: GET, Route: explainers/style.css]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('explainers/style.css')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('explainers/style.css', [], true)
+ 3 APPPATH/Controllers/Explainers.php(13): view('explainers/style.css')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->view('style.css')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:37:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "explainers/plots.js"
+[Method: GET, Route: explainers/plots.js]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('explainers/plots.js')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('explainers/plots.js', [], true)
+ 3 APPPATH/Controllers/Explainers.php(13): view('explainers/plots.js')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->view('plots.js')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:37:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "explainers/plots.js"
+[Method: GET, Route: explainers/plots.js]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('explainers/plots.js')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('explainers/plots.js', [], true)
+ 3 APPPATH/Controllers/Explainers.php(13): view('explainers/plots.js')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->view('plots.js')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-10 15:37:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "explainers/maths.js"
+[Method: GET, Route: explainers/maths.js]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('explainers/maths.js')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('explainers/maths.js', [], true)
+ 3 APPPATH/Controllers/Explainers.php(13): view('explainers/maths.js')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Explainers->view('maths.js')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Explainers))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
